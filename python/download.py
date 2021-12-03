@@ -39,7 +39,7 @@ def receive_edinet_doc_list(day_path: str, yyyymmdd: str):
         try:
             body = json.load(res)
         except json.decoder.JSONDecodeError:
-            print("書類一覧のデータが不正です。\nEDINETがメンテナンス中の可能性があります。")
+            print("書類一覧のデータが不正です。\nEDINETがメンテナンス中の可能性があります。", file=sys.stderr)
             sys.exit()
 
     if body['metadata']['status'] == "404":
@@ -100,12 +100,12 @@ def receive_edinet_doc(doc, dst_path):
         if not check_zip_file(dst_path):
             # ZIPファイルが壊れている場合
 
-            print("!!!!!!!!!! ERROR !!!!!!!!!!\n" * 1)
-            print("msg:[%s] status:[%s] reason:[%s]" % (str(web_file.msg), str(web_file.status), str(web_file.reason) ))
-            print("!!!!!!!!!! ERROR [%s] !!!!!!!!!!\n" % dst_path)
-            print(json.dumps(doc, indent=2, ensure_ascii=False))
-            print("!!!!!!!!!! ERROR !!!!!!!!!!\n" * 1)
-
+            print("!!!!!!!!!! ERROR !!!!!!!!!!\n" * 1, file=sys.stderr)
+            print("msg:[%s] status:[%s] reason:[%s]" % (str(web_file.msg), str(web_file.status), str(web_file.reason) ), file=sys.stderr)
+            print("!!!!!!!!!! ERROR [%s] !!!!!!!!!!\n" % dst_path, file=sys.stderr)
+            print(json.dumps(doc, indent=2, ensure_ascii=False), file=sys.stderr)
+            print("!!!!!!!!!! ERROR !!!!!!!!!!\n" * 1, file=sys.stderr)
+            print("But it is processing...", file=sys.stderr)
             os.remove(dst_path)
             time.sleep(2)
 
