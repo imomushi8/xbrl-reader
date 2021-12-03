@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 filing_date_account_ids = [
     # "jpdei_cor:EDINETCodeDEI", # EDINETコード
     # "jpdei_cor:CurrentPeriodEndDateDEI", # 当会計期間終了日 当会計期間終了日、DEI dateItemType
