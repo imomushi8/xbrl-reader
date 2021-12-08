@@ -75,10 +75,10 @@ def ReadAllSchema():
     inf = Inf()
 
     xsd_label_files = [ 
-        [ "jpcrp_cor", "jpcrp/2019-11-01/jpcrp_cor_2019-11-01.xsd", "jpcrp/2019-11-01/label/jpcrp_2019-11-01_lab.xml"],
-        [ "jppfs_cor", "jppfs/2019-11-01/jppfs_cor_2019-11-01.xsd", "jppfs/2019-11-01/label/jppfs_2019-11-01_lab.xml"],
+        [ "jpcrp_cor", "jpcrp/2021-11-01/jpcrp_cor_2019-11-01.xsd", "jpcrp/2019-11-01/label/jpcrp_2021-11-01_lab.xml"],
+        [ "jppfs_cor", "jppfs/2021-11-01/jppfs_cor_2019-11-01.xsd", "jppfs/2019-11-01/label/jppfs_2021-11-01_lab.xml"],
         [ "jpdei_cor", "jpdei/2013-08-31/jpdei_cor_2013-08-31.xsd", "jpdei/2013-08-31/label/jpdei_2013-08-31_lab.xml"],
-        [ "jpigp_cor", "jpigp/2019-11-01/jpigp_cor_2019-11-01.xsd", "jpigp/2019-11-01/label/jpigp_2019-11-01_lab.xml"]
+        [ "jpigp_cor", "jpigp/2021-11-01/jpigp_cor_2019-11-01.xsd", "jpigp/2019-11-01/label/jpigp_2021-11-01_lab.xml"]
     ]
 
     for prefix, xsd_file, lable_file in xsd_label_files:
